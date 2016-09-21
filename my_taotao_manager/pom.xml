@@ -1,0 +1,49 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.taotao.my</groupId>
+    <artifactId>my_taotao_parent</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <groupId>com.taotao.my</groupId>
+  <artifactId>my_taotao_manager</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <!-- 后台管理系统聚合父工程 
+  		1.管理聚合子工程
+  		2.抽取公共坐标
+  		3.抽取插件(tomcat)
+  		4.依赖工具类
+  -->
+  <dependencies>
+  	<dependency>
+  		<artifactId>my_taotao_common</artifactId>
+  		<groupId>com.taotao.my</groupId>
+  		<version>0.0.1-SNAPSHOT</version>
+  	</dependency>
+  </dependencies>
+  <build>
+  	<plugins>
+	  <!-- 配置tomcat -->
+  		<plugin>
+  			<groupId>org.apache.tomcat.maven</groupId>
+			<artifactId>tomcat7-maven-plugin</artifactId>
+			<version>2.2</version>
+			<!-- 指定项目发布路径和端口 -->
+			<configuration>
+				<!-- 把项目发布到根路径下面：类似tomcat/webapps/ROOT -->
+				<path>/</path>
+				<!-- 项目访问端口 -->
+				<port>8080</port>
+			</configuration>
+  		</plugin>
+  	</plugins>
+  </build>
+  <modules>
+  <!-- 聚合项目中只有一个war,取消聚合web项目 -->
+  	<module>my_taotao_manager_pojo</module>
+  	<module>my_taotao_manager_dao</module>
+  	<module>my_taotao_manager_service</module>
+  	<module>my_taotao_manager_interface</module>
+  </modules>
+</project>
