@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>com.taotao.my</groupId>
-    <artifactId>my_taotao_manager</artifactId>
+    <artifactId>my_taotao_parent</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <artifactId>my_taotao_manager_web</artifactId>
@@ -83,6 +83,16 @@
 				<groupId>com.github.sgroschupf</groupId>
 				<artifactId>zkclient</artifactId>
 				<version>${zkclient.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.github.miemiedev</groupId>
+				<artifactId>mybatis-paginator</artifactId>
+				<version>${mybatis.paginator.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.github.pagehelper</groupId>
+				<artifactId>pagehelper</artifactId>
+				<version>${pagehelper.version}</version>
 			</dependency>
 			<!-- 依赖service接口 -->
 			<dependency>
