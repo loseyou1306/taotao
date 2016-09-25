@@ -1,0 +1,11 @@
+/target/
+/.settings
+*.project
+/my_taotao_content_interface/target/
+/my_taotao_content_interface/.settings
+/my_taotao_content_interface/*.project
+/my_taotao_content_interface/*.classpath
+/my_taotao_content_service/target/
+/my_taotao_content_service/.settings
+/my_taotao_content_service/*.project
+/my_taotao_content_service/*.classpath
