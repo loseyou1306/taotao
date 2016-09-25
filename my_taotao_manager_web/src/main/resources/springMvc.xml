@@ -18,6 +18,9 @@
 	http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd
 	http://www.springframework.org/schema/util
 	http://www.springframework.org/schema/util/spring-util-4.0.xsd">
+	
+	<!-- 加载resources.properties配置文件 -->
+	<context:property-placeholder location="classpath:resources.properties" />
 	<!-- 配置注解扫描,扫描包接口,使用注解开发 -->
 	<context:component-scan base-package="com.taotao.my.manager.controller"></context:component-scan>
 	<!-- 注解驱动 -->
@@ -41,4 +44,16 @@
 	<!-- 引用服务 -->
 	<dubbo:reference interface="com.taotao.my.manager.service.ItemCatService"
 		id="itemCatService" timeout="100000"/>
+	<!-- 引用服务 -->
+	<dubbo:reference interface="com.taotao.my.content.service.ContentCategoryService"
+		id="contentCategoryService" timeout="100000"/>
+	<!-- 引用服务 -->
+	<dubbo:reference interface="com.taotao.my.content.service.ContentService"
+		id="contentService" timeout="100000"/>
+		
+	<!-- 配置文件上传解析器 -->
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="maxUploadSize" value="102400000"></property>
+		<property name="defaultEncoding" value="utf-8"></property>
+	</bean>
 </beans>

@@ -9,8 +9,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.alibaba.dubbo.config.support.Parameter;
 import com.taotao.my.manager.domain.TbItem;
+import com.taotao.my.manager.domain.TbItemDesc;
 import com.taotao.my.manager.service.ItemService;
 import com.taotao.my.manager.utils.ResultList;
+import com.taotao.my.manager.utils.TaotaoResult;
 
 @Controller
 public class ItemController {
@@ -42,6 +44,16 @@ public class ItemController {
 		ResultList resultList = itemService.findIbItemByPage(page, rows);
 		return resultList;
 	}
-	
+	/**
+	 * 需求:添加新的商品ds
+	 * 请求:/item/save
+	 * 参数:TbItem,TbItemDesc
+	 * 返回值:TaotaoResult
+	 */
+	@RequestMapping("/item/save")
+	public @ResponseBody TaotaoResult saveItemAndDesc(TbItem item,TbItemDesc desc){
+		TaotaoResult taotaoResult = itemService.saveItemAndDesc(item, desc);
+		return taotaoResult;
+	}
 	
 }
