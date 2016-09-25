@@ -1,0 +1,21 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.taotao.my</groupId>
+    <artifactId>my_taotao_content</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <artifactId>my_taotao_content_interface</artifactId>
+   <!-- 
+  	对接口抽取
+  	1、对外提供接口服务(表现层服务调用接口，注入接口必须接口jar)
+  	2、注册服务：通过Zookeeper把接口URL地址注册到注册中心zookeeper
+   -->
+   <dependencies>
+   	<dependency>
+   		<artifactId>my_taotao_manager_pojo</artifactId>
+   		<groupId>com.taotao.my</groupId>
+   		<version>0.0.1-SNAPSHOT</version>
+   	</dependency>
+   </dependencies>
+</project>
