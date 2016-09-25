@@ -2,6 +2,7 @@ package com.taotao.my.manager.test;
 
 import java.util.List;
 
+import org.junit.Ignore;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -14,7 +15,7 @@ import com.taotao.my.manager.mapper.TbItemMapper;
 import com.taotao.my.manager.service.ItemService;
 
 public class PageTest {
-	
+	@Ignore
 	@Test
 	public void testPage(){
 		ApplicationContext applicationContext = 
