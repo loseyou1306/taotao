@@ -10,6 +10,9 @@
         <dependent-module archiveName="my_taotao_manager_pojo-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/my_taotao_manager_pojo/my_taotao_manager_pojo">
             <dependency-type>uses</dependency-type>
         </dependent-module>
+        <dependent-module archiveName="my_taotao_content_interface-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/my_taotao_content_interface/my_taotao_content_interface">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
         <dependent-module archiveName="my_taotao_common-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/my_taotao_common/my_taotao_common">
             <dependency-type>uses</dependency-type>
         </dependent-module>

@@ -13,7 +13,7 @@ import com.taotao.my.manager.utils.EasyUiTreeNode;
 import com.taotao.my.manager.utils.TaotaoResult;
 
 @Controller
-public class ContentCategoryCotroller {
+public class ContentCategoryController {
 	@Autowired
 	private ContentCategoryService contentCategoryService;
 
