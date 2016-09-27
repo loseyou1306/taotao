@@ -1,6 +1,9 @@
 package com.taotao.my.content.service;
 
+import java.util.List;
+
 import com.taotao.my.manager.domain.TbContent;
+import com.taotao.my.manager.utils.AdItem;
 import com.taotao.my.manager.utils.ResultList;
 import com.taotao.my.manager.utils.TaotaoResult;
 
@@ -19,4 +22,10 @@ public interface ContentService {
 	 * 返回: TaotaoResult
 	 */
 	TaotaoResult insertContent(TbContent content);
+	/**
+	 * 查询大广告位置处的信息
+	 * 查询参数:Long categoryId
+	 * 返回值:List<AdItem>
+	 */
+	List<AdItem> findContentListByCategoryId(Long categoryId);
 }

@@ -62,6 +62,12 @@
 			<artifactId>zkclient</artifactId>
 			<version>${zkclient.version}</version>
 		</dependency>
+		<!-- Redis客户端 -->
+		<dependency>
+			<groupId>redis.clients</groupId>
+			<artifactId>jedis</artifactId>
+			<version>${jedis.version}</version>
+		</dependency>
 
 		<!-- 依赖dao层 -->
 		<dependency>
