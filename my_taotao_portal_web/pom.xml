@@ -1,15 +1,16 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <groupId>com.taotao.my</groupId>
-    <artifactId>my_taotao_parent</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-  </parent>
-  <groupId>com.taotao.my</groupId>
-  <artifactId>my_taotao_portal_web</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <packaging>war</packaging>
-  <!-- 需要坐标: servlet坐标 jsp坐标 jstl坐标 service接口坐标 ,spring-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.taotao.my</groupId>
+		<artifactId>my_taotao_parent</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<groupId>com.taotao.my</groupId>
+	<artifactId>my_taotao_portal_web</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>war</packaging>
+	<!-- 需要坐标: servlet坐标 jsp坐标 jstl坐标 service接口坐标 ,spring -->
 	<dependencies>
 		<!-- 单元测试 -->
 		<dependency>
@@ -99,12 +100,13 @@
 			<version>${pagehelper.version}</version>
 		</dependency>
 		
+
 		<!-- 依赖service接口 -->
-		<!-- <dependency>
+		<dependency>
 			<groupId>com.taotao.my</groupId>
-			<artifactId>my_taotao_portal_interface</artifactId>
+			<artifactId>my_taotao_content_interface</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
-		</dependency> -->
+		</dependency>
 		<dependency>
 			<groupId>com.taotao.my</groupId>
 			<artifactId>my_taotao_common</artifactId>
